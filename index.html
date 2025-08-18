@@ -44,6 +44,10 @@
         
         .hero-section {
             height: 600px;
+            background-image: url('Mask group 1.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             position: relative;
             display: flex;
             align-items: stretch;
@@ -462,7 +466,38 @@
             font-size: 14px;
         }
         
-        /* Hero backgrounds removed - clean slate */
+        /* Hero Background Breakpoints - Clean and Organized */
+        /* Default (1430px and above): Mask group 1.svg */
+        
+        @media (max-width: 1429px) {
+            .hero-section {
+                background-image: url('Mask Group 2.svg');
+            }
+        }
+        
+        @media (max-width: 1271px) {
+            .hero-section {
+                background-image: url('Mask Group 3.svg');
+            }
+        }
+        
+        @media (max-width: 1075px) {
+            .hero-section {
+                background-image: url('Mask Group 4.svg');
+            }
+        }
+        
+        @media (max-width: 1000px) {
+            .hero-section {
+                background-image: url('Mask Group 5.svg');
+            }
+        }
+        
+        @media (max-width: 895px) {
+            .hero-section {
+                background-image: url('Mask Group 6.svg');
+            }
+        }
         
         /* Layout Breakpoints - Separate from Backgrounds */
         @media (max-width: 1200px) {
