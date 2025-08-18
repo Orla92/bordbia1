@@ -466,9 +466,11 @@
             font-size: 14px;
         }
         
-        /* Responsive Design */
+        /* Hero Background Breakpoints - Clear and Organized */
         @media (max-width: 1429px) {
-            /* Background removed */
+            .hero-section {
+                background-image: url('Mask group 1.svg');
+            }
         }
         
         @media (max-width: 1271px) {
@@ -481,25 +483,6 @@
             .hero-section {
                 background-image: url('Mask Group 3.png');
                 height: 400px;
-            }
-        }
-        
-        @media (max-width: 1200px) {
-            .hero-section {
-                flex-direction: column;
-                height: 600px;
-            }
-            
-            .hero-image-right {
-                display: none;
-            }
-            
-            .content-left {
-                padding: 40px 32px;
-            }
-            
-            .line-break {
-                display: block;
             }
         }
         
@@ -518,6 +501,26 @@
         @media (max-width: 605px) {
             .hero-section {
                 background-image: url('Mask Group 6.svg');
+            }
+        }
+        
+        /* Layout Breakpoints - Separate from Backgrounds */
+        @media (max-width: 1200px) {
+            .hero-section {
+                flex-direction: column;
+                height: 600px;
+            }
+            
+            .hero-image-right {
+                display: none;
+            }
+            
+            .content-left {
+                padding: 40px 32px;
+            }
+            
+            .line-break {
+                display: block;
             }
         }
         
