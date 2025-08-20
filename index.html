@@ -184,32 +184,7 @@
         
 
         
-        /* Remove left padding from second column */
-        .column:nth-child(2) {
-            padding-left: 0;
-        }
-        
-        /* Add left padding back for H2 and chevron in second column */
-        .column:nth-child(2) .column-heading {
-            padding-left: 32px;
-        }
-        
-        /* Add left padding back for CTA in second column */
-        .column:nth-child(2) .column-cta {
-            padding-left: 32px;
-            margin-left: 32px;
-        }
-        
-        /* Force CTA left margin in second column */
-        .column:nth-child(2) .column-content .column-cta {
-            margin-left: 32px !important;
-        }
-        
-        /* Align second column arrows with text baseline */
-        .column:nth-child(2) .list-icon {
-            align-self: flex-start;
-            margin-top: 3px;
-        }
+        /* All columns now have consistent padding */
         
         .column::before {
             content: '';
@@ -280,23 +255,7 @@
             margin-left: 0;
         }
         
-        /* Align second column text with chevrons above and below */
-        .column:nth-child(2) .column-text ul {
-            margin-left: 0;
-            padding-left: 0;
-        }
-        
-        .column:nth-child(2) .column-text li {
-            margin-left: 0;
-            padding-left: 0;
-            text-align: left;
-        }
-        
-        /* Ensure CTA aligns with text and chevron */
-        .column:nth-child(2) .column-cta {
-            margin-left: 0;
-            padding-left: 0;
-        }
+        /* All columns now have consistent text alignment */
         
         .contact-section {
             margin-bottom: 20px;
