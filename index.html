@@ -132,7 +132,7 @@
         
         .btn-primary-cta {
             background: #39B54A;
-            color: var(--teal-dark);
+            color: white;
             border: none;
             padding: 8px 32px;
             border-radius: 25px;
@@ -145,15 +145,22 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-width: 160px;
-            height: 40px;
+            min-width: 320px;
+            height: 42px;
         }
         
         .btn-primary-cta:hover {
-            background: #2d8a3a;
+            background: #39B54A;
             font-weight: 700;
             text-decoration: none;
-            color: var(--teal-dark);
+            color: white;
+        }
+        
+        @media (max-width: 700px) {
+            .btn-primary-cta {
+                min-width: 100%;
+                width: 100%;
+            }
         }
         
 
@@ -169,7 +176,7 @@
         
         .columns-wrapper {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 3fr 1fr;
             gap: 32px;
             width: 100%;
         }
@@ -193,7 +200,7 @@
             left: 0;
             right: 0;
             height: 10px;
-            background-color: #eac62d;
+            background-color: #39B54A;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
@@ -218,9 +225,101 @@
         .column-text {
             font-size: 16px;
             line-height: 1.4;
-            color: #0D4F52;
+            color: #595959;
             font-family: 'ASAP', sans-serif;
             margin: 0;
+        }
+        
+        .mini-columns {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+        
+        @media (max-width: 1240px) {
+            .mini-columns {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 1075px) {
+            .columns-wrapper {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+            }
+            
+            .mini-columns {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 20px;
+            }
+            
+            .column {
+                padding-left: 16px;
+                padding-right: 16px;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                box-sizing: border-box;
+            }
+            
+            .three-column-section {
+                padding-left: 16px;
+                padding-right: 16px;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                box-sizing: border-box;
+            }
+        }
+        
+        @media (max-width: 1000px) {
+            .mini-columns {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+        }
+        
+        @media (max-width: 795px) {
+            .mini-columns {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 580px) {
+            .mini-columns {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+        
+        .mini-column p {
+            margin-bottom: 16px;
+        }
+        
+        .mini-column-heading {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0D4F52;
+            margin-bottom: 8px;
+            font-family: 'Bord Bia Sans', sans-serif;
+            text-transform: capitalize;
+        }
+        
+        .icon-placeholder {
+            font-size: 24px;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        
+        .mini-column-icon {
+            width: 24px !important;
+            height: 24px !important;
+            filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(120deg) brightness(97%) contrast(102%) !important;
         }
         
         .column-text ul {
@@ -314,9 +413,7 @@
             border-color: #00B9BD;
         }
         
-        .column:first-child .rectangle-icon {
-            filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(130deg) brightness(97%) contrast(102%);
-        }
+
         
         .column:first-child .placeholder-text {
             color: #00B9BD;
@@ -331,10 +428,7 @@
             font-family: 'ASAP', sans-serif;
         }
         
-        .rectangle-icon {
-            width: 32px;
-            height: 32px;
-        }
+
         
         .placeholder-text {
             color: white;
@@ -736,7 +830,7 @@
             
             <!-- Subhead -->
             <p class="subhead">
-                Prepare for your audit, find official support documents, and access information about Quality Assurance – all in one place.
+                Manage your Bord Bia certification, view audit history, provide close out, access supports and learn more
             </p>
             
 
@@ -761,18 +855,46 @@
                 <div class="column">
                     <div class="column-content">
                         <h2 class="column-heading">
-                            Market Statistics
+                            What Bord Bia Certification Means For You
                         </h2>
                         <div class="column-text">
-                            <p><strong>Quality Assurance protects market access:</strong> worth nearly €17 billion in annual Irish agri-food exports, with 90% of Irish food and drink exported.</p>
-                            
-                            <p><strong>Required by buyers:</strong> international buyers require proof that the food they purchase meets high standards. Bord Bia Quality Assurance provides that proof.</p>
-                            
-                            <p><strong>On-farm benefits:</strong> audits help prepare you for cross compliance, legal requirements, and raise awareness of safety issues.</p>
-                            
-                            <p><strong>Show your commitment:</strong> membership of Quality Assurance demonstrates best practice in food production, animal husbandry, and sustainability.</p>
-                            
-                            <p><strong>Fully accredited:</strong> Bord Bia schemes are fully accredited by INAB (the Irish National Accreditation Board) to an internationally recognised standard.</p>
+                            <div class="mini-columns">
+                                <div class="mini-column">
+                                    <div class="icon-placeholder">
+                                        <img src="earth-europe-light-full.svg" alt="Earth" class="mini-column-icon">
+                                    </div>
+                                    <h3 class="mini-column-heading">Quality Assurance protects market access</h3>
+                                    <p>Worth nearly €17 billion in annual Irish agri-food exports, with 90% of Irish food and drink exported.</p>
+                                </div>
+                                <div class="mini-column">
+                                    <div class="icon-placeholder">
+                                        <img src="badge-check-regular-full.svg" alt="Badge Check" class="mini-column-icon">
+                                    </div>
+                                    <h3 class="mini-column-heading">Required by buyers</h3>
+                                    <p>International buyers require proof that the food they purchase meets high standards. Bord Bia Quality Assurance provides that proof.</p>
+                                </div>
+                                <div class="mini-column">
+                                    <div class="icon-placeholder">
+                                        <img src="barn-regular-full.svg" alt="Barn" class="mini-column-icon">
+                                    </div>
+                                    <h3 class="mini-column-heading">On-farm benefits</h3>
+                                    <p>Audits help prepare you for cross compliance, legal requirements, and raise awareness of safety issues.</p>
+                                </div>
+                                <div class="mini-column">
+                                    <div class="icon-placeholder">
+                                        <img src="handshake-regular-full.svg" alt="Handshake" class="mini-column-icon">
+                                    </div>
+                                    <h3 class="mini-column-heading">Show your commitment</h3>
+                                    <p>Membership of Quality Assurance demonstrates best practice in food production, animal husbandry, and sustainability.</p>
+                                </div>
+                                <div class="mini-column">
+                                    <div class="icon-placeholder">
+                                        <img src="award-regular-full.svg" alt="Award" class="mini-column-icon">
+                                    </div>
+                                    <h3 class="mini-column-heading">Fully accredited</h3>
+                                    <p>Bord Bia schemes are fully accredited by INAB (the Irish National Accreditation Board) to an internationally recognised standard.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -785,28 +907,16 @@
                         <div class="column-text">
                             <div class="contact-section">
                                 <h3 class="section-heading">
-                                    <img src="angles-right.svg" alt="Arrow" class="list-icon">Audit Queries
+                                    <img src="angles-right.svg" alt="Arrow" class="list-icon">Helpdesk
                                 </h3>
-                                <p>For help with the sustainability survey, closing non-compliances, or other audit issues, call <strong>01 524 0410</strong> Monday-Friday, 9am-8pm.</p>
+                                <p>For help with the sustainability survey, closing non-compliance, or other audit issues, call <strong>01 525 0410</strong> Monday - Friday, 9am - 8pm</p>
                             </div>
                             
                             <div class="contact-section">
                                 <h3 class="section-heading">
                                     <img src="angles-right.svg" alt="Arrow" class="list-icon">New Applications
                                 </h3>
-                                <p>Apply to the Sustainable Assurance Schemes by phone: <strong>062 54 900</strong>.</p>
-                            </div>
-                            
-                            <div class="contact-section">
-                                <h3 class="section-heading">
-                                    <img src="angles-right.svg" alt="Arrow" class="list-icon">Close Out Options
-                                </h3>
-                                <p>We recommend you upload evidence of close out to this portal. However, you can also submit evidence by:</p>
-                                <ul class="contact-methods">
-                                    <li><strong>SMS:</strong> 083 180 0069 (include herd number)</li>
-                                    <li><strong>Email:</strong> closeout@bordbia.ie (herd number in subject)</li>
-                                    <li><strong>Post:</strong> Bord Bia Helpdesk, Tralee Road Industrial Estate, Castleisland, Co. Kerry</li>
-                                </ul>
+                                <p><strong>062 54 900</strong> Monday - Friday, 9.30am - 5pm</p>
                             </div>
                         </div>
                     </div>
